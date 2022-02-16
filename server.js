@@ -47,6 +47,10 @@ app.delete('/deletenote/:id', authenticateToken, deleteNote);
 
 app.put('/updatenote/:id', authenticateToken, updateNote);
 
+app.get("/",(req,res)=> {
+  res.send("Hello, I am your Host for the Notes taking web-app backend") ; 
+})
+
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
